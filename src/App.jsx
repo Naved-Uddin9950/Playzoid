@@ -8,6 +8,10 @@ import GameLoader from './pages/GameLoader'
 import Snake from './pages/games/Snake'
 import Memory from './pages/games/Memory'
 import Game2048 from './pages/games/Game2048'
+import Sudoku from './pages/games/Sudoku'
+import WordGuess from './pages/games/WordGuess'
+import Typing from './pages/games/Typing'
+import MathSprint from './pages/games/MathSprint'
 import './App.css'
 
 function App(){
@@ -21,6 +25,10 @@ function App(){
         <Route path="/games/snake" element={<Snake />} />
         <Route path="/games/memory" element={<Memory />} />
         <Route path="/games/2048" element={<Game2048 />} />
+        <Route path="/games/sudoku" element={<Sudoku />} />
+        <Route path="/games/word-guess" element={<WordGuess />} />
+        <Route path="/games/typing" element={<Typing />} />
+        <Route path="/games/math-sprint" element={<MathSprint />} />
         <Route path="/games/:id" element={<GameLoader />} />
         <Route path="/about" element={<div className="max-w-4xl mx-auto px-4 py-8">About the gaming hub</div>} />
         <Route path="*" element={<NotFound />} />
