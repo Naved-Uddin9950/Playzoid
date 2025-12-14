@@ -1,36 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
+import TicTacToe from './pages/games/TicTacToe'
+import RockPaperScissors from './pages/games/RockPaperScissors'
+import GameLoader from './pages/GameLoader'
+import Snake from './pages/games/Snake'
+import Memory from './pages/games/Memory'
+import Game2048 from './pages/games/Game2048'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function App(){
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="max-w-4xl w-full p-8 text-center">
-        <div>
-          <a href="https://vite.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
-        </div>
-        <h1 className="text-4xl font-bold my-6">Vite + React</h1>
-        <div className="card bg-white rounded-lg shadow p-6">
-          <button className="px-4 py-2 bg-indigo-600 text-white rounded" onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p className="mt-4">
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs mt-6 text-gray-500">
-          Click on the Vite and React logos to learn more
-        </p>
-      </div>
-    </main>
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/games/tictactoe" element={<TicTacToe />} />
+        <Route path="/games/rps" element={<RockPaperScissors />} />
+        <Route path="/games/snake" element={<Snake />} />
+        <Route path="/games/memory" element={<Memory />} />
+        <Route path="/games/2048" element={<Game2048 />} />
+        <Route path="/games/:id" element={<GameLoader />} />
+        <Route path="/about" element={<div className="max-w-4xl mx-auto px-4 py-8">About the gaming hub</div>} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </div>
   )
 }
 
