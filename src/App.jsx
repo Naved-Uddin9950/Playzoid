@@ -16,6 +16,10 @@ import WhackAMole from './pages/games/WhackAMole'
 import TapCircle from './pages/games/TapCircle'
 import Flappy from './pages/games/Flappy'
 import EndlessRunner from './pages/games/EndlessRunner'
+import Reaction from './pages/games/Reaction'
+import ColorMatch from './pages/games/ColorMatch'
+import MazeEscape from './pages/games/MazeEscape'
+import AimTrainer from './pages/games/AimTrainer'
 import './App.css'
 
 function App(){
@@ -37,6 +41,10 @@ function App(){
         <Route path="/games/tap-circle" element={<TapCircle />} />
         <Route path="/games/flappy" element={<Flappy />} />
         <Route path="/games/endless-runner" element={<EndlessRunner />} />
+        <Route path="/games/reaction" element={<Reaction />} />
+        <Route path="/games/color-match" element={<ColorMatch />} />
+        <Route path="/games/maze-escape" element={<MazeEscape />} />
+        <Route path="/games/aim-trainer" element={<AimTrainer />} />
         <Route path="/games/:id" element={<GameLoader />} />
         <Route path="/about" element={<div className="max-w-4xl mx-auto px-4 py-8">About the gaming hub</div>} />
         <Route path="*" element={<NotFound />} />
