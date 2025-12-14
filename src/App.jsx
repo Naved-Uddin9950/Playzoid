@@ -12,6 +12,10 @@ import Sudoku from './pages/games/Sudoku'
 import WordGuess from './pages/games/WordGuess'
 import Typing from './pages/games/Typing'
 import MathSprint from './pages/games/MathSprint'
+import WhackAMole from './pages/games/WhackAMole'
+import TapCircle from './pages/games/TapCircle'
+import Flappy from './pages/games/Flappy'
+import EndlessRunner from './pages/games/EndlessRunner'
 import './App.css'
 
 function App(){
@@ -29,6 +33,10 @@ function App(){
         <Route path="/games/word-guess" element={<WordGuess />} />
         <Route path="/games/typing" element={<Typing />} />
         <Route path="/games/math-sprint" element={<MathSprint />} />
+        <Route path="/games/whack-a-mole" element={<WhackAMole />} />
+        <Route path="/games/tap-circle" element={<TapCircle />} />
+        <Route path="/games/flappy" element={<Flappy />} />
+        <Route path="/games/endless-runner" element={<EndlessRunner />} />
         <Route path="/games/:id" element={<GameLoader />} />
         <Route path="/about" element={<div className="max-w-4xl mx-auto px-4 py-8">About the gaming hub</div>} />
         <Route path="*" element={<NotFound />} />
