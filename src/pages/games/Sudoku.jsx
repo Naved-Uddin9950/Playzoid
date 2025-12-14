@@ -104,22 +104,22 @@ export default function Sudoku(){
       </div>
 
       <div className="mb-3 flex gap-2 items-center">
-        <button className={`px-3 py-1 rounded ${level==='easy'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>setLevel('easy')}>Easy</button>
-        <button className={`px-3 py-1 rounded ${level==='medium'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>setLevel('medium')}>Medium</button>
-        <button className={`px-3 py-1 rounded ${level==='hard'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>setLevel('hard')}>Hard</button>
+        <button className={`px-3 py-1 rounded ${level==='easy'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>setLevel('easy')}>Easy</button>
+        <button className={`px-3 py-1 rounded ${level==='medium'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>setLevel('medium')}>Medium</button>
+        <button className={`px-3 py-1 rounded ${level==='hard'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>setLevel('hard')}>Hard</button>
         <div className="ml-auto">Time: <strong>{formatTime(time)}</strong></div>
       </div>
 
       <div className="grid grid-cols-9 gap-1 max-w-md mx-auto">
         {grid.map((row,r)=>row.map((cell,c)=> (
-          <input key={`${r}-${c}`} className={`w-full aspect-square text-center py-2 border ${PUZZLES[level].puzzle[r][c] ? 'bg-gray-100' : 'bg-white' }`} value={cell||''} onChange={e=>setCell(r,c, Number(e.target.value)||0)} />
+          <input key={`${r}-${c}`} className={`w-full aspect-square text-center py-2 border ${PUZZLES[level].puzzle[r][c] ? 'bg-gray-100 dark:bg-slate-700' : 'bg-white dark:bg-slate-800' }`} value={cell||''} onChange={e=>setCell(r,c, Number(e.target.value)||0)} />
         )))}
       </div>
 
       <div className="mt-4 flex gap-2">
         <button className="px-3 py-1 bg-indigo-600 text-white rounded" onClick={()=>setRunning(r=>!r)}>{running ? 'Pause' : 'Start'}</button>
-        <button className="px-3 py-1 bg-gray-200 rounded" onClick={hint}>Hint</button>
-        <button className="px-3 py-1 bg-gray-200 rounded" onClick={saveProgress}>Save</button>
+        <button className="px-3 py-1 bg-gray-200 dark:bg-slate-700 rounded" onClick={hint}>Hint</button>
+        <button className="px-3 py-1 bg-gray-200 dark:bg-slate-700 rounded" onClick={saveProgress}>Save</button>
       </div>
 
       <div className="mt-4">

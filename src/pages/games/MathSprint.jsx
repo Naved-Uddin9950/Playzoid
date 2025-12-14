@@ -53,12 +53,12 @@ export default function MathSprint(){
       </div>
 
       <div className="mb-3 flex gap-2">
-        <button className={`px-3 py-1 rounded ${level==='easy'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>setLevel('easy')}>Easy</button>
-        <button className={`px-3 py-1 rounded ${level==='medium'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>setLevel('medium')}>Medium</button>
-        <button className={`px-3 py-1 rounded ${level==='hard'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>setLevel('hard')}>Hard</button>
+        <button className={`px-3 py-1 rounded ${level==='easy'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>setLevel('easy')}>Easy</button>
+        <button className={`px-3 py-1 rounded ${level==='medium'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>setLevel('medium')}>Medium</button>
+        <button className={`px-3 py-1 rounded ${level==='hard'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>setLevel('hard')}>Hard</button>
       </div>
 
-      <div className="mb-4 bg-white p-4 rounded shadow">
+      <div className="mb-4 bg-white dark:bg-slate-800 p-4 rounded shadow">
         <div className="text-sm text-gray-500 mb-2">Time: <strong>{time}s</strong></div>
         <div className="text-xl font-bold mb-2">{question.q}</div>
         <div className="flex gap-2">
@@ -72,7 +72,7 @@ export default function MathSprint(){
         <button className="px-3 py-1 bg-indigo-600 text-white rounded" onClick={start}>Start</button>
       </div>
 
-      <div className="bg-white p-3 rounded shadow">
+      <div className="bg-white dark:bg-slate-800 p-3 rounded shadow">
         <h4 className="font-semibold">Leaderboard</h4>
         {leaderboard.length === 0 ? <div className="text-sm text-gray-500 mt-2">No scores yet</div> : (
           <ul className="mt-2 text-sm">

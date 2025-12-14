@@ -74,7 +74,7 @@ export default function WhackAMole(){
 
       <div className="mt-4 flex gap-2">
         <button className="px-3 py-1 bg-indigo-600 text-white rounded" onClick={start}>Start</button>
-        <button className="px-3 py-1 bg-gray-200 rounded" onClick={stop}>Stop</button>
+        <button className="px-3 py-1 bg-gray-200 dark:bg-slate-700 rounded" onClick={stop}>Stop</button>
       </div>
     </div>
   )

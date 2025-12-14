@@ -48,8 +48,8 @@ export default function WordGuess(){
       </div>
 
       <div className="mb-3 flex gap-2">
-        <button className={`px-3 py-1 rounded ${mode==='daily'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>setMode('daily')}>Daily</button>
-        <button className={`px-3 py-1 rounded ${mode==='unlimited'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>setMode('unlimited')}>Unlimited</button>
+        <button className={`px-3 py-1 rounded ${mode==='daily'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>setMode('daily')}>Daily</button>
+        <button className={`px-3 py-1 rounded ${mode==='unlimited'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>setMode('unlimited')}>Unlimited</button>
       </div>
 
       <div className="mb-3">
@@ -71,7 +71,7 @@ export default function WordGuess(){
         ))}
       </div>
 
-      <div className="mt-4 bg-white p-3 rounded shadow">
+      <div className="mt-4 bg-white dark:bg-slate-800 p-3 rounded shadow">
         <h4 className="font-semibold">Recent</h4>
         {history.length === 0 ? <div className="text-sm text-gray-500 mt-2">No history</div> : (
           <ul className="mt-2 text-sm space-y-1">

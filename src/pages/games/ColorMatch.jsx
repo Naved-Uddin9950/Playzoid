@@ -50,7 +50,7 @@ export default function ColorMatch(){
       </div>
 
       <div className="mb-4">
-        <div className="text-center text-3xl font-bold p-6 rounded bg-white"> <span style={{color: display.color}}>{display.word}</span></div>
+        <div className="text-center text-3xl font-bold p-6 rounded bg-white dark:bg-slate-800"> <span style={{color: display.color}}>{display.word}</span></div>
       </div>
 
       <div className="flex gap-2 items-center">
@@ -63,7 +63,7 @@ export default function ColorMatch(){
 
       <div className="mt-4">
         <button className="px-3 py-1 bg-indigo-600 text-white rounded" onClick={start}>Start</button>
-        <button className="px-3 py-1 bg-gray-200 rounded ml-2" onClick={()=>setRunning(r=>!r)}>{running? 'Pause' : 'Resume'}</button>
+        <button className="px-3 py-1 bg-gray-200 dark:bg-slate-700 rounded ml-2" onClick={()=>setRunning(r=>!r)}>{running? 'Pause' : 'Resume'}</button>
       </div>
     </div>
   )

@@ -99,9 +99,9 @@ export default function Memory(){
 
       <div className="flex gap-2 items-center mb-4" ref={containerRef}>
         <label className="text-sm">Grid:</label>
-        <button onClick={()=>start(12)} className={`px-2 py-1 rounded ${grid===12?'bg-indigo-600 text-white':'bg-white'}`}>3x4</button>
-        <button onClick={()=>start(16)} className={`px-2 py-1 rounded ${grid===16?'bg-indigo-600 text-white':'bg-white'}`}>4x4</button>
-        <button onClick={()=>start(24)} className={`px-2 py-1 rounded ${grid===24?'bg-indigo-600 text-white':'bg-white'}`}>4x6</button>
+        <button onClick={()=>start(12)} className={`px-2 py-1 rounded ${grid===12?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`}>3x4</button>
+        <button onClick={()=>start(16)} className={`px-2 py-1 rounded ${grid===16?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`}>4x4</button>
+        <button onClick={()=>start(24)} className={`px-2 py-1 rounded ${grid===24?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`}>4x6</button>
         <div className="ml-auto flex gap-4 items-center">
           <div className="text-sm">Time: <strong>{formatTime(time)}</strong></div>
           <div className="text-sm">Moves: <strong>{moves}</strong></div>
@@ -112,7 +112,7 @@ export default function Memory(){
 
       <div className={`grid gap-3 mx-auto`} style={{gridTemplateColumns: `repeat(${Math.sqrt(grid)}, 1fr)`, maxWidth: 520}}>
         {deck.map(c => (
-          <button key={c.id} onClick={()=>flipCard(c.id)} disabled={c.matched} className={`aspect-square rounded shadow flex items-center justify-center text-xl font-bold ${c.matched ? 'bg-green-100' : flipped.includes(c.id) ? 'bg-white' : 'bg-slate-700 text-transparent'}`}>
+          <button key={c.id} onClick={()=>flipCard(c.id)} disabled={c.matched} className={`aspect-square rounded shadow flex items-center justify-center text-xl font-bold ${c.matched ? 'bg-green-100' : flipped.includes(c.id) ? 'bg-white dark:bg-slate-800' : 'bg-slate-700 text-transparent'}`}>
             {flipped.includes(c.id) || c.matched ? c.value : '❓'}
           </button>
         ))}
@@ -120,7 +120,7 @@ export default function Memory(){
 
       <div className="mt-4 flex gap-2">
         <button className="px-4 py-2 bg-indigo-600 text-white rounded" onClick={()=>start(grid)}>Restart</button>
-        <button className="px-4 py-2 bg-gray-200 rounded" onClick={()=>{setRunning(r=>!r)}}>{running ? 'Pause' : 'Resume'}</button>
+        <button className="px-4 py-2 bg-gray-200 dark:bg-slate-700 rounded" onClick={()=>{setRunning(r=>!r)}}>{running ? 'Pause' : 'Resume'}</button>
       </div>
     </div>
   )

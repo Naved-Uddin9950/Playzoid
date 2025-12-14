@@ -4,7 +4,7 @@ import games from '../games'
 
 function GameCard({ g }) {
   return (
-    <Link to={g.route} className="block p-4 bg-white rounded-lg shadow hover:shadow-md transition">
+    <Link to={g.route} className="block p-4 bg-white dark:bg-slate-800 rounded-lg shadow hover:shadow-md transition">
       <div className="font-semibold">{g.name}</div>
       <div className="text-xs text-gray-500 mt-1">{g.tier}</div>
     </Link>
@@ -24,10 +24,10 @@ export default function Home() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-4">Free Online Games Hub</h2>
-      <p className="text-gray-600 mb-6">Select a game to play — everything runs in your browser. Progress and scores are saved locally.</p>
+      <p className="text-gray-600 dark:text-gray-300 mb-6">Select a game to play — everything runs in your browser. Progress and scores are saved locally.</p>
 
       <div className="mb-6">
-        <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search games..." className="w-full p-2 border rounded" />
+        <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search games..." className="w-full p-2 border rounded bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100" />
       </div>
 
       {Object.keys(groups).map(tier => (

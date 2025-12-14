@@ -67,7 +67,7 @@ export default function RockPaperScissors(){
       <h2 className="text-2xl font-bold mb-4">Rock Paper Scissors</h2>
       <div className="mb-4 flex gap-2" ref={containerRef}>
         {CHOICES.map(c => (
-          <button key={c} onClick={()=>play(c)} className={`px-4 py-2 bg-white rounded shadow transform transition ${flash === 'win' && player===c ? 'scale-105' : ''}`}>{c}</button>
+          <button key={c} onClick={()=>play(c)} className={`px-4 py-2 bg-white dark:bg-slate-800 rounded shadow transform transition ${flash === 'win' && player===c ? 'scale-105' : ''}`}>{c}</button>
         ))}
         <div className="ml-auto flex items-center gap-2">
           <FullscreenButton targetRef={containerRef} />
@@ -76,14 +76,14 @@ export default function RockPaperScissors(){
       </div>
 
       <div className="mt-6">{res ? (
-        <div className="bg-white p-4 rounded shadow">
+        <div className="bg-white dark:bg-slate-800 p-4 rounded shadow">
           <div>Player: {player}</div>
           <div>Computer: {computer}</div>
           <div className="mt-2 font-semibold">Result: {res}</div>
         </div>
       ) : <div className="text-gray-500">Make a move</div>}</div>
 
-      <div className="mt-6 bg-white p-4 rounded shadow">
+      <div className="mt-6 bg-white dark:bg-slate-800 p-4 rounded shadow">
         <div className="flex items-center justify-between">
           <div>Streak: {streak}</div>
           <div className="flex items-center gap-2">

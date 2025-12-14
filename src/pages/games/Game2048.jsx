@@ -136,7 +136,7 @@ export default function Game2048(){
         <div>Score: <strong>{score}</strong></div>
         <div>High: <strong>{high}</strong></div>
         <div className="ml-auto flex gap-2">
-          <button className="px-3 py-1 bg-gray-200 rounded" onClick={undo}>Undo</button>
+          <button className="px-3 py-1 bg-gray-200 dark:bg-slate-700 rounded" onClick={undo}>Undo</button>
           <button className="px-3 py-1 bg-indigo-600 text-white rounded" onClick={reset}>New Game</button>
           <FullscreenButton targetRef={containerRef} />
         </div>

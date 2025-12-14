@@ -110,25 +110,25 @@ export default function TicTacToe(){
     <div className="max-w-3xl mx-auto px-4 py-8" ref={containerRef}>
       <h2 className="text-2xl font-bold mb-4">Tic Tac Toe</h2>
       <div className="mb-4 flex gap-2">
-        <button className={`px-3 py-1 rounded ${mode==='pvp'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>{setMode('pvp'); reset()}}>Player vs Player</button>
-        <button className={`px-3 py-1 rounded ${mode==='ai-easy'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>{setMode('ai-easy'); reset()}}>Player vs AI (Easy)</button>
-        <button className={`px-3 py-1 rounded ${mode==='ai-hard'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>{setMode('ai-hard'); reset()}}>Player vs AI (Hard)</button>
+        <button className={`px-3 py-1 rounded ${mode==='pvp'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>{setMode('pvp'); reset()}}>Player vs Player</button>
+        <button className={`px-3 py-1 rounded ${mode==='ai-easy'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>{setMode('ai-easy'); reset()}}>Player vs AI (Easy)</button>
+        <button className={`px-3 py-1 rounded ${mode==='ai-hard'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>{setMode('ai-hard'); reset()}}>Player vs AI (Hard)</button>
         <div className="ml-auto">
           <FullscreenButton targetRef={containerRef} />
         </div>
       </div>
       <div className="grid grid-cols-3 gap-2 w-64 sm:w-80 md:w-96 mx-auto">
         {squares.map((s,i)=> (
-          <button key={i} onClick={()=>handleClick(i)} className="aspect-square bg-white rounded shadow flex items-center justify-center text-2xl font-bold">{s}</button>
+          <button key={i} onClick={()=>handleClick(i)} className="aspect-square bg-white dark:bg-slate-800 rounded shadow flex items-center justify-center text-2xl font-bold">{s}</button>
         ))}
       </div>
 
       <div className="mt-6 text-center">
         <div className="mb-2">{status}</div>
-        <button className="px-4 py-2 bg-gray-200 rounded" onClick={reset}>Reset</button>
+        <button className="px-4 py-2 bg-gray-200 dark:bg-slate-700 rounded" onClick={reset}>Reset</button>
       </div>
 
-      <div className="mt-6 bg-white p-4 rounded shadow">
+      <div className="mt-6 bg-white dark:bg-slate-800 p-4 rounded shadow">
         <h3 className="font-semibold">Win Streaks</h3>
         <div className="flex gap-4 mt-2">
           <div>X: {streak?.x ?? 0}</div>

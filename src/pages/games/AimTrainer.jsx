@@ -30,7 +30,7 @@ export default function AimTrainer(){
         <FullscreenButton targetRef={containerRef} />
       </div>
 
-      <div className="relative mx-auto max-w-md h-64 bg-slate-100 rounded shadow mb-4" onClick={miss} style={{touchAction:'manipulation'}}>
+      <div className="relative mx-auto max-w-md h-64 bg-slate-100 dark:bg-slate-800 rounded shadow mb-4" onClick={miss} style={{touchAction:'manipulation'}}>
         {targets.map(t => (
           <button key={t.id} onClick={(e)=>{ e.stopPropagation(); shot(t.id) }} style={{position:'absolute', left:`${t.x}%`, top:`${t.y}%`, transform:'translate(-50%,-50%)'}} className="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center">+</button>
         ))}
@@ -42,7 +42,7 @@ export default function AimTrainer(){
         <div>Accuracy: <strong>{shots? Math.round((score/shots)*100) : 0}%</strong></div>
         <div className="ml-auto">Best Acc: <strong>{best}%</strong></div>
         <button className="px-3 py-1 bg-indigo-600 text-white rounded" onClick={start}>Start</button>
-        <button className="px-3 py-1 bg-gray-200 rounded" onClick={stop}>Stop</button>
+        <button className="px-3 py-1 bg-gray-200 dark:bg-slate-700 rounded" onClick={stop}>Stop</button>
       </div>
     </div>
   )

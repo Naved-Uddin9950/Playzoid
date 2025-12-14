@@ -49,13 +49,13 @@ export default function Typing(){
       </div>
 
       <div className="mb-3 flex gap-2">
-        <button className={`px-3 py-1 rounded ${mode===30?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>{setMode(30); setTimeLeft(30)}}>30s</button>
-        <button className={`px-3 py-1 rounded ${mode===60?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>{setMode(60); setTimeLeft(60)}}>60s</button>
+        <button className={`px-3 py-1 rounded ${mode===30?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>{setMode(30); setTimeLeft(30)}}>30s</button>
+        <button className={`px-3 py-1 rounded ${mode===60?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>{setMode(60); setTimeLeft(60)}}>60s</button>
       </div>
 
-      <div className="mb-3 p-4 bg-white rounded shadow">
+      <div className="mb-3 p-4 bg-white dark:bg-slate-800 rounded shadow">
         <div className="text-sm text-gray-500 mb-2">Time left: <strong>{timeLeft}s</strong></div>
-        <div className="p-2 border rounded min-h-[80px]">{text.split('').map((ch,i)=> (
+        <div className="p-2 border rounded min-h-20">{text.split('').map((ch,i)=> (
           <span key={i} className={i<pos ? ( (text[i]===text[i] && i<pos && i<pos) ? 'text-green-600' : '' ) : ''}>{ch}</span>
         ))}</div>
       </div>

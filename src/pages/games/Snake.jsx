@@ -161,9 +161,9 @@ export default function Snake(){
         <div className="text-sm">Score: <strong>{score}</strong></div>
         <div className="text-sm">High: <strong>{high}</strong></div>
         <div className="ml-auto flex gap-2">
-          <button className={`px-3 py-1 rounded ${speedLevel==='easy'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>setSpeedLevel('easy')}>Easy</button>
-          <button className={`px-3 py-1 rounded ${speedLevel==='medium'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>setSpeedLevel('medium')}>Medium</button>
-          <button className={`px-3 py-1 rounded ${speedLevel==='hard'?'bg-indigo-600 text-white':'bg-white'}`} onClick={()=>setSpeedLevel('hard')}>Hard</button>
+          <button className={`px-3 py-1 rounded ${speedLevel==='easy'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>setSpeedLevel('easy')}>Easy</button>
+          <button className={`px-3 py-1 rounded ${speedLevel==='medium'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>setSpeedLevel('medium')}>Medium</button>
+          <button className={`px-3 py-1 rounded ${speedLevel==='hard'?'bg-indigo-600 text-white':'bg-white dark:bg-slate-800'}`} onClick={()=>setSpeedLevel('hard')}>Hard</button>
         </div>
       </div>
 
@@ -173,7 +173,7 @@ export default function Snake(){
 
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="grid grid-rows-3 grid-cols-3 gap-2 w-48 pointer-events-auto">
-                  <button onClick={()=>changeDir({x:0,y:-1})} className="col-start-2 row-start-1 px-2 py-1 bg-white/80 rounded">↑</button>
+                  <button onClick={()=>changeDir({x:0,y:-1})} className="col-start-2 row-start-1 px-2 py-1 bg-white/80 dark:bg-slate-900/80 rounded">↑</button>
                   <button onClick={()=>changeDir({x:-1,y:0})} className="col-start-1 row-start-2 px-2 py-1 bg-white/80 rounded">←</button>
                   <button onClick={()=>changeDir({x:1,y:0})} className="col-start-3 row-start-2 px-2 py-1 bg-white/80 rounded">→</button>
                   <button onClick={()=>changeDir({x:0,y:1})} className="col-start-2 row-start-3 px-2 py-1 bg-white/80 rounded">↓</button>
@@ -184,10 +184,10 @@ export default function Snake(){
 
       <div className="mt-4 flex gap-2">
         <button className="px-4 py-2 bg-indigo-600 text-white rounded" onClick={()=>setRunning(r=>!r)}>{running ? 'Pause' : 'Start'}</button>
-        <button className="px-4 py-2 bg-gray-200 rounded" onClick={reset}>Reset</button>
+        <button className="px-4 py-2 bg-gray-200 dark:bg-slate-700 rounded" onClick={reset}>Reset</button>
       </div>
 
-      <div className="mt-6 bg-white p-4 rounded shadow">
+      <div className="mt-6 bg-white dark:bg-slate-800 p-4 rounded shadow">
         <div className="flex items-center justify-between">
           <h3 className="font-semibold">Score History</h3>
             <div className="flex gap-2 items-center">

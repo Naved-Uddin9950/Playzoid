@@ -58,7 +58,7 @@ export default function Reaction(){
 
       <div className="flex gap-2 items-center">
         <button className="px-3 py-1 bg-indigo-600 text-white rounded" onClick={start}>Start</button>
-        <button className="px-3 py-1 bg-gray-200 rounded" onClick={reset}>Reset</button>
+        <button className="px-3 py-1 bg-gray-200 dark:bg-slate-700 rounded" onClick={reset}>Reset</button>
         <div className="ml-auto">Best: <strong>{best ?? '-'}</strong> ms</div>
       </div>
     </div>

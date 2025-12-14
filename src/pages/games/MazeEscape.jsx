@@ -72,7 +72,7 @@ export default function MazeEscape(){
         <FullscreenButton targetRef={containerRef} />
       </div>
 
-      <div className="mx-auto max-w-md bg-white rounded shadow p-2 mb-4">
+      <div className="mx-auto max-w-md bg-white dark:bg-slate-800 rounded shadow p-2 mb-4">
         <div style={{display:'grid', gridTemplateColumns:`repeat(${maze[0].length}, 20px)`}}>
           {maze.flatMap((v,i)=>{
             const y = Math.floor(i/maze[0].length), x = i % maze[0].length
@@ -85,7 +85,7 @@ export default function MazeEscape(){
 
       <div className="flex gap-2 items-center">
         <button className="px-3 py-1 bg-indigo-600 text-white rounded" onClick={()=>{setTime(0); setRunning(true)}}>Start</button>
-        <button className="px-3 py-1 bg-gray-200 rounded" onClick={reset}>New Maze</button>
+        <button className="px-3 py-1 bg-gray-200 dark:bg-slate-700 rounded" onClick={reset}>New Maze</button>
         <div className="ml-auto">Time: <strong>{time}s</strong></div>
         <div className="ml-2">Best: <strong>{best ?? '-'}</strong></div>
       </div>

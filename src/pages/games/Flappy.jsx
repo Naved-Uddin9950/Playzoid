@@ -85,7 +85,7 @@ export default function Flappy(){
         <h2 className="text-2xl font-bold">Flappy Clone</h2>
         <FullscreenButton targetRef={containerRef} />
       </div>
-      <div className="mx-auto max-w-md bg-white rounded shadow p-2">
+      <div className="mx-auto max-w-md bg-white dark:bg-slate-800 rounded shadow p-2">
         <canvas ref={canvasRef} className="w-full" onClick={flap} style={{touchAction:'manipulation'}} />
       </div>
       <div className="mt-3 flex gap-4 items-center">
