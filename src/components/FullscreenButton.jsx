@@ -25,7 +25,7 @@ export default function FullscreenButton({ targetRef }){
   }
 
   return (
-    <button onClick={toggle} className="px-3 py-1 bg-slate-100 rounded">
+    <button onClick={toggle} className="px-3 py-1 bg-slate-100 dark:text-black rounded">
       {isFs ? 'Exit Fullscreen' : 'Fullscreen'}
     </button>
   )
